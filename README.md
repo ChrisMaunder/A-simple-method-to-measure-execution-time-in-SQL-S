@@ -12,7 +12,7 @@ With SQL Server 2008 Microsoft introduced the `DateTime2 `which provides higher 
 
 To time SQL calls simply use 
 
-```sql
+```tsql
 Declare @StartTime DateTime2 = SysUTCDateTime()
 
 -- my SQL calls
@@ -22,7 +22,7 @@ Print 'Time taken was ' + cast(DateDiff(millisecond, @StartTime, SysUTCDateTime(
 
 For SQL Server versions below SQL Server 2008 you'll need to fall back to the traditional `DateTime`:
 
-```sql
+```tsql
 Declare @StartTime DateTime = GetDate()
 
 -- my SQL calls
